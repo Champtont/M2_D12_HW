@@ -41,9 +41,7 @@ const getImages = () => {
         />
         <div class="card-body">
         <p class="card-text">
-        This is a wider card with supporting text below as a natural
-        lead-in to additional content. This content is a little bit
-        longer.
+        This is a photo related to nature
         </p>
         <div
         class="d-flex justify-content-between align-items-center"
@@ -105,9 +103,7 @@ const getDifImages = () => {
         />
         <div class="card-body">
         <p class="card-text">
-        This is a wider card with supporting text below as a natural
-        lead-in to additional content. This content is a little bit
-        longer.
+        This is a photo related to dogs
         </p>
         <div
         class="d-flex justify-content-between align-items-center"
@@ -173,9 +169,7 @@ const displaySearch = () => {
         />
         <div class="card-body">
         <p class="card-text">
-        This is a wider card with supporting text below as a natural
-        lead-in to additional content. This content is a little bit
-        longer.
+        This is a photo related to your "${userInput}" search
         </p>
         <div
         class="d-flex justify-content-between align-items-center"
