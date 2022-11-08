@@ -19,10 +19,10 @@ const getImages = () => {
         card.innerHTML = `
         <div class="card mb-4 shadow-sm">
           <img
-            class="bd-placeholder-img card-img-top img-fluid"
-            src="${pic.url}"
-            style = 'width:100%;
-            height:100%; object-fit:cover;"
+            class="card-img-top img-fluid"
+            src=${pic.src.original}
+            style = width:100%;
+            height:100%;"
           />
           <div class="card-body">
             <p class="card-text">
@@ -47,7 +47,7 @@ const getImages = () => {
                   Hide
                 </button>
               </div>
-              <small class="text-muted">"${pic.id}"</small>
+              <small class="text-muted">${pic.id}</small>
             </div>
           </div>
         </div>
