@@ -9,7 +9,51 @@ const getImages = () => {
   })
     .then((response) => response.json())
     .then((stuff) => {
-      console.log(stuff);
+      let photos = stuff.photos;
+      console.log(photos);
+      for (let i = 0; i < photos.length; i++) {
+        const container = document.querySelector("#addToRow");
+        let pic = photos[i];
+        const card = document.createElement("div");
+        card.classList.add("col-md-4");
+        card.innerHTML = `
+        <div class="card mb-4 shadow-sm">
+          <img
+            class="bd-placeholder-img card-img-top img-fluid"
+            src="${pic.url}"
+            style = 'width:100%;
+            height:100%; object-fit:cover;"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div
+              class="d-flex justify-content-between align-items-center"
+            >
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  View
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  Hide
+                </button>
+              </div>
+              <small class="text-muted">"${pic.id}"</small>
+            </div>
+          </div>
+        </div>
+      `;
+        container.appendChild(card);
+      }
       console.log("clicked");
     });
 };
@@ -23,7 +67,9 @@ const getDifImages = () => {
   })
     .then((response) => response.json())
     .then((stuff) => {
-      console.log(stuff);
+      //console.log(stuff.photos);
+      let photos = stuff.photos;
+      console.log(photos);
       console.log("pushed");
     });
 };
